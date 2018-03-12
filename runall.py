@@ -10,7 +10,9 @@ import importlib, sys
 from bs4 import BeautifulSoup
 importlib.reload(sys)
 
-cur_path = os.getcwd()
+# cur_path = os.getcwd()
+
+cur_path = os.path.dirname(os.path.realpath(__file__))
 dada_path = os.path.join(cur_path+'\\test_Data\\test_Data.xlsx')
 
 
@@ -118,8 +120,6 @@ def is_result_pass():
     except Exception as msg:
         print("判断过程出现异常：%s"%str(msg))
         return False
-
-
 
 
 if __name__ == "__main__":
