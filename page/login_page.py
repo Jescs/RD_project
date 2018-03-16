@@ -24,8 +24,14 @@ class Login_page(BasePage):
     def is_login_sucess(self):
         # 判断是不是登录成功
         sucess_loc = ("class name", "topArea")
+        failed_loc = ("id", "loginError")
         result = self.is_text_in_element(sucess_loc,"选择要进入的组织")
-        return result
+        if result is True:
+            print("登录成功")
+        else:
+            result = self.get_text(failed_loc)
+            print(result)
+
 
 if __name__ == "__main__":
     from selenium import webdriver
@@ -33,7 +39,7 @@ if __name__ == "__main__":
     driver = webdriver.Chrome()
     login_driver = Login_page(driver)
     driver.get(Login_url)
-    login_driver.login("18980944331","18980944331")
+    login_driver.login("189809441","18980944331")
     time.sleep(3)
     login_driver.is_login_sucess()
 
