@@ -39,7 +39,7 @@ class BasePage(object):
 
     def click(self, locator):
         '''点击操作'''
-        element = self.find_element(locator)
+        element = WebDriverWait(self.driver, self.timeout, 1).until(EC.presence_of_element_located(locator))
         element.click()
 
     def send_keys(self, locator, text, is_clear=True):

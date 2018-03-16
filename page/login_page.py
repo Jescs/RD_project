@@ -42,4 +42,3 @@ if __name__ == "__main__":
     login_driver.login("189809441","18980944331")
     time.sleep(3)
     login_driver.is_login_sucess()
-
