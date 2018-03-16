@@ -25,7 +25,7 @@ class Login_page(BasePage):
         # 判断是不是登录成功
         sucess_loc = ("class name", "topArea")
         failed_loc = ("id", "loginError")
-        result = self.is_text_in_element(sucess_loc,"选择要进入的组织")
+        result = self.is_text_in_element(sucess_loc)
         if result is True:
             print("登录成功")
         else:

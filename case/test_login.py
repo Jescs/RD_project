@@ -12,19 +12,19 @@ class TestLogin(unittest.TestCase):
 
     def test_login1(self):
         self.logindriver.login("test", "111111")
-        result = self.logindriver.is_login_sucess()
+        self.logindriver.is_login_sucess()
 
     def test_login2(self):
         self.logindriver.login("18980944331", "18980944331")
-        result = self.logindriver.is_login_sucess()
+        self.logindriver.is_login_sucess()
 
     def test_login3(self):
         self.logindriver.login(" ", " ")
-        result = self.logindriver.is_login_sucess()
+        self.logindriver.is_login_sucess()
 
     def test_login4(self):
         self.logindriver.login(",skdk1", " /jsjsjsj")
-        result = self.logindriver.is_login_sucess()
+        self.logindriver.is_login_sucess()
 
 
 if __name__ == '__main__':
